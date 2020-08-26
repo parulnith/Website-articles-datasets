@@ -526,17 +526,15 @@ _Things to Note:_
      -  **Deploy :** Whether to deploy the Model to Cloud or keep it local.
      -  **Interpret this Model**  - Refers to  Interpreting a machine learning model  in a human-readable format. 
 
-          
-          - **MLI for NLP**
 
           Click on `intrepret this Model` button on the completed experiment page to interpret the  Driverless AI NLP model on original and transformed features.This launches the Model Interpretation for that experiment. This page provides several visual explanations and reason codes for the trained  model and its results. Here we shall only go through the explanation of the NLP specific models.For the rest, refer to the tutorial-[Machine Learning Experiment Scoring and Analysis Tutorial - Financial Focus](https://training.h2o.ai/products/tutorial-1b-machine-learning-experiment-scoring-and-analysis-tutorial-financial-focus).
 
-           -- **NLP TOKENS**
+           - **NLP TOKENS**
 
          This plot is available for natural language processing (NLP) models. It is located in the Dataset tab on the Model Interpretation page (only visible for NLP models). It shows both the global and local importance values of each token in a corpus (a large and structured set of texts). The corpus is automatically generated from text features used by Driverless AI models prior to the process of tokenization.
 
 
-           -- **NLP LOCO**
+           - **NLP LOCO**
 
           This plot is available for natural language processing (NLP) models. It applies a leave-one-covariate-out (LOCO) styled approach to NLP models by removing a specific token from all text features in a record and predicting local importance without that token. The difference between the resulting score and the original score (token included) is useful when trying to determine how specific changes to text features alter the predictions made by the model.
         
