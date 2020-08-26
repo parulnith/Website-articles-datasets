@@ -457,13 +457,13 @@ In our NLP recipe, we also have linear models on top of n-gram TFIDF / frequency
 
 Driverless AI NLP recipe makes use of the power of word embeddings where words or phrases from the vocabulary are mapped to vectors of real numbers.
 
-- **Bi-direction GRU models on word embeddings**
+- **Bi-direction GRU models on Word Embeddings**
 
 A Bi-directional GRU model is like putting two independent RNN models in one. Taking note of accuracy as well as speed in our experiments, we have decided to take advantage of high speed and almost similar accuracies of GRU architecture compared to its counterpart LSTM.
 
 - **Convolution neural network models on:**
 
-     - **word Embeddings**
+     - **Word Embeddings**
 
      In Driverless AI, we pass word embeddings as input to CNN models, get cross-validated predictions from it and use them as a new set of features.
 
@@ -488,8 +488,11 @@ The BERT model support multiple languages. [DistilBERT](https://arxiv.org/abs/19
 - **Domain Specific BERT Recipes**
 
 DAI Base BERT model can also be extended for domain specific problems
+
     - [FinBERT](https://github.com/ProsusAI/finBERT) trained on financial text
+    
     - [SciBERT](https://github.com/allenai/scibert) trained on scientific text
+    
     - [BioBERT](https://github.com/dmis-lab/biobert) trained on bio-medical text
 
 
