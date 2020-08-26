@@ -489,9 +489,9 @@ The BERT model support multiple languages. [DistilBERT](https://arxiv.org/abs/19
 
 DAI Base BERT model can also be extended for domain specific problems
 
-    -- [FinBERT](https://github.com/ProsusAI/finBERT) trained on financial text
-    -- [SciBERT](https://github.com/allenai/scibert) trained on scientific text
-    -- [BioBERT](https://github.com/dmis-lab/biobert) trained on bio-medical text
+    -- [FinBERT](https://github.com/ProsusAI/finBERT) trained on financial text)
+    -- [SciBERT](https://github.com/allenai/scibert) trained on scientific text)
+    -- [BioBERT](https://github.com/dmis-lab/biobert) trained on bio-medical text)
 
 
 ### Deeper Dive and Resources
