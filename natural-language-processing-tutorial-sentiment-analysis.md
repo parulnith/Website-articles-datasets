@@ -228,7 +228,6 @@ Click on the `Select Which Pretrained PyTorch NLP Models to Use` and specify one
 
 * Using BERT-like models may result in a longer experiment completion time.
 
---- 
 
 Additionally, there are three more buttons located beneath the experimental settings knob which stand for the following:
 
@@ -434,51 +433,51 @@ Text data can contain critical information to inform better predictions. H2O Dri
 ![Driverless-NLP-recipe](assets/Driverless-NLP-recipe.png)
 
 ### Key Capabilities of Driverless AI NLP Recipe
-1. **n-grams**
+- **n-grams**
 
 An n-gram is a continuous sequence of n items from a given sample of text or speech.
 
-2. **TFIDF of n-grams**
+- **TFIDF of n-grams**
 
 Frequency-based features are multiplied with inverse document frequency to get TFIDF vectors.
 
-3. **Frequency of n-grams**
+- **Frequency of n-grams**
 
 Frequency-based features represent the count of each word in the given text in the form of vectors. Frequency-based features are created for different n-gram values[2]. The dimensions of the output vectors are quite high. Words/n-grams that occur more number of times will get higher weightage than the ones that occur less frequently.
 
-4. **Truncated SVD Features**
+- **Truncated SVD Features**
 
 Both TFIDF and Frequency of n-grams result in a higher dimension. To tackle this, we use Truncated SVD to decompose the vector arrays in lower dimensions.
 
-5. **Linear models on TF/IDF vectors**
+- **Linear models on TF/IDF vectors**
 
 In our NLP recipe, we also have linear models on top of n-gram TFIDF / frequency vectors. This capture linear dependencies that are simple yet significant in achieving the best accuracies.
 
-6. **Word Embeddings**
+- **Word Embeddings**
 
 Driverless AI NLP recipe makes use of the power of word embeddings where words or phrases from the vocabulary are mapped to vectors of real numbers.
 
-7. **Bi-direction GRU models on word embeddings**
+- **Bi-direction GRU models on word embeddings**
 
 A Bi-directional GRU model is like putting two independent RNN models in one. Taking note of accuracy as well as speed in our experiments, we have decided to take advantage of high speed and almost similar accuracies of GRU architecture compared to its counterpart LSTM.
 
-8. **Convolution neural network models on:**
+- **Convolution neural network models on:**
 
-- **word embeddings**
+     - **word Embeddings**
 
-In Driverless AI, we pass word embeddings as input to CNN models, get cross-validated predictions from it and use them as a new set of features.
+     In Driverless AI, we pass word embeddings as input to CNN models, get cross-validated predictions from it and use them as a new set of features.
 
--  **CNN models on character embeddings**
+     - **Character embeddings**
 
-Natural language processing is complex as the language is hard to understand given small data and different languages.Targeting languages like Japanese, Chinese where characters play a major role, we have character level embeddings in our recipe as well.
+     Natural language processing is complex as the language is hard to understand given small data and different languages.Targeting languages like Japanese, Chinese where characters play a major role, we have character level embeddings in our recipe as well.
 
-In character embeddings, each character gets represented in the form of vectors rather than words. Driverless AI uses character level embeddings as input to CNN models and later extract class probabilities to feed as features for downstream models. This gives the ability to work in languages other than English also. In case of languages like Japanese, Chinese etc where there is no concept of words, character embeddings will be useful.
+     In character embeddings, each character gets represented in the form of vectors rather than words. Driverless AI uses character level embeddings as input to CNN models and later extract class probabilities to feed as features for downstream models. This gives the ability to work in languages other than English also. In case of languages like Japanese, Chinese etc where there is no concept of words, character embeddings will be useful.
 
-9. **BERT/DistilBERT Models for Feature Engineering:**
+- **BERT/DistilBERT Models for Feature Engineering:**
 
 BERT and [DistilBERT](https://arxiv.org/abs/1910.01108) models can be used for generating embeddings for any text columns. These pretrained models are used to get embeddings for the text followed by Linear/Logistic Regression to generate features that can then be used for any downstream models in Driverless AI.
 
-10. **PyTorch Transformer Architecture Models (eg. BERT) as Modeling Algorithms:**
+- **PyTorch Transformer Architecture Models (eg. BERT) as Modeling Algorithms:**
 
 Starting with Driverless AI 1.9 release, the Transformer-based architectures shown in the diagram below are supported as models in Driverless AI.
 
@@ -486,13 +485,13 @@ Starting with Driverless AI 1.9 release, the Transformer-based architectures sho
 
 The BERT model support multiple languages. [DistilBERT](https://arxiv.org/abs/1910.01108) is a distilled version of BERT that has fewer parameters compared to BERT (40% less) and it is faster (60% speedup) while retaining 95% of BERT level performance. The DistilBERT model can be useful when training time and model size is important
 
-11. **Domain Specific BERT Recipes**
+- **Domain Specific BERT Recipes**
 
 DAI Base BERT model can also be extended for domain specific problems
-* [FinBERT](https://github.com/ProsusAI/finBERT) trained on financial text
-* [SciBERT](https://github.com/allenai/scibert) trained on scientific text
-* [BioBERT](https://github.com/dmis-lab/biobert) trained on bio-medical text
----
+    - [FinBERT](https://github.com/ProsusAI/finBERT) trained on financial text
+    - [SciBERT](https://github.com/allenai/scibert) trained on scientific text
+    - [BioBERT](https://github.com/dmis-lab/biobert) trained on bio-medical text
+
 
 ### Deeper Dive and Resources
 
