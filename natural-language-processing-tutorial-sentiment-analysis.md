@@ -531,12 +531,12 @@ _Things to Note:_
 
            - **NLP TOKENS**
 
-         This plot is available for natural language processing (NLP) models. It is located in the Dataset tab on the Model Interpretation page (only visible for NLP models). It shows both the global and local importance values of each token in a corpus (a large and structured set of texts). The corpus is automatically generated from text features used by Driverless AI models prior to the process of tokenization.
+          This plot is available for natural language processing (NLP) models. It is located in the Dataset tab on the Model Interpretation page (only visible  for NLP models). It shows both the global and local importance values of each token in a corpus (a large and structured set of texts). The corpus is automatically generated from text features used by Driverless AI models prior to the process of tokenization.
 
 
            - **NLP LOCO**
 
-          This plot is available for natural language processing (NLP) models. It applies a leave-one-covariate-out (LOCO) styled approach to NLP models by removing a specific token from all text features in a record and predicting local importance without that token. The difference between the resulting score and the original score (token included) is useful when trying to determine how specific changes to text features alter the predictions made by the model.
+           This plot is available for natural language processing (NLP) models. It applies a leave-one-covariate-out (LOCO) styled approach to NLP models by removing a specific token from all text features in a record and predicting local importance without that token. The difference between the resulting score and the original score (token included) is useful when trying to determine how specific changes to text features alter the predictions made by the model.
         
      - **Diagnose Model on New Dataset**  - allows you to view model performance for multiple scorers based on existing model and a test dataset
      - **Score on another Dataset**  - After you generate a model, you can use that model to make predictions on another dataset.
@@ -567,8 +567,7 @@ _Things to Note:_
       ![variable-importance](assets/variable-importance.png)
 
 
-
-     The complete list of features used in the final model is available in the Experiment Summary artifacts. The Experiment Summary also provides a list of the original features and their estimated feature importance.
+      The complete list of features used in the final model is available in the Experiment Summary artifacts. The Experiment Summary also provides a list of the original features and their estimated feature importance.
 
 4. Summary
 
@@ -598,6 +597,8 @@ Recipes are customizations and extensions to the Driverless AI platform. They ar
 -   Custom machine learning models
 -   Custom scorers (classification or regression)
 -   Custom transformers  
+
+
 
 ![recipes-workflow](assets/recipes-workflow.png)
 
@@ -653,11 +654,11 @@ https://raw.githubusercontent.com/h2oai/driverlessai-recipes/master/transformers
 8. Enable if you want to skip failure of models
     
     
-7\. Click Save to save the settings. The selected transformer should now appear on the main Experiment screen as follows.
+8\. Click Save to save the settings. The selected transformer should now appear on the main Experiment screen as follows.
 
 ![main-screen_after_expert_settings](assets/main-screen_after_expert_settings.png)
 
-8\. Launch the Experiment with the Custom Recipe.
+9\. Launch the Experiment with the Custom Recipe.
 
 ### References
 
@@ -727,6 +728,8 @@ Import Amazon Fine Food Reviews training and test datasets to the Datasets Overv
 5\. If the file loaded successfully then the following image should appear on the screen
 
 ![Appendix_upload-dataset](assets/Appendix_upload-dataset.png)
+
+You can see that a new set of datasets now appear on the screen.
 
 ## Next Steps
 
