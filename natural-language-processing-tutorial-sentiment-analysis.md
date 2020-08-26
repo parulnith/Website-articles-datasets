@@ -489,11 +489,9 @@ The BERT model support multiple languages. [DistilBERT](https://arxiv.org/abs/19
 
 DAI Base BERT model can also be extended for domain specific problems
 
-    - [FinBERT](https://github.com/ProsusAI/finBERT) trained on financial text
-    
-    - [SciBERT](https://github.com/allenai/scibert) trained on scientific text
-    
-    - [BioBERT](https://github.com/dmis-lab/biobert) trained on bio-medical text
+    * [FinBERT](https://github.com/ProsusAI/finBERT) trained on financial text
+    * [SciBERT](https://github.com/allenai/scibert) trained on scientific text
+    * [BioBERT](https://github.com/dmis-lab/biobert) trained on bio-medical text
 
 
 ### Deeper Dive and Resources
@@ -533,13 +531,13 @@ _Things to Note:_
 
           Click on `intrepret this Model` button on the completed experiment page to interpret the  Driverless AI NLP model on original and transformed features.This launches the Model Interpretation for that experiment. This page provides several visual explanations and reason codes for the trained  model and its results. Here we shall only go through the explanation of the NLP specific models.For the rest, refer to the tutorial:[Machine Learning Experiment Scoring and Analysis Tutorial - Financial Focus](https://training.h2o.ai/products/tutorial-1b-machine-learning-experiment-scoring-and-analysis-tutorial-financial-focus).
 
-               NLP TOKENS
+               **NLP TOKENS**
 
                 This plot is available for natural language processing (NLP) models. It is located in the Dataset tab on the Model Interpretation page (only visible for NLP models).
                 This plot shows both the global and local importance values of each token in a corpus (a large and structured set of texts). The corpus is automatically generated from text features used by Driverless AI models prior to the process of tokenization.
 
 
-               NLP LOCO
+               **NLP LOCO**
 
                 This plot is available for natural language processing (NLP) models.
                 This plot applies a leave-one-covariate-out (LOCO) styled approach to NLP models by removing a specific token from all text features in a record and predicting local importance without that token. The difference between the resulting score and the original score (token included) is useful when trying to determine how specific changes to text features alter the predictions made by the model.
@@ -552,7 +550,7 @@ _Things to Note:_
           - **Training (Holdout) Predictions** : In csv format, available if a validation set was NOT provided.
           - **Validation Set Predictions** : In csv format, available if a validation set was provided.
           - **Test Set Predictions** : In csv format, available if a test dataset is used.
-     -  **Build Python Scoring Pipeline**  - A standalone Python scoring pipeline for H2O Driverless AI
+     - **Build Python Scoring Pipeline**  - A standalone Python scoring pipeline for H2O Driverless AI
      - **Build MOJO Scoring Pipeline** - A standalone Model ObJect, Optimized scoring pipeline that can be easily embeddable in java environment'
      - **Visualize Scoring Pipeline(Experimental)** - Opens an experiment pipeline visualization page. Refer to [Visualizing the Scoring Pipeline](http://docs.h2o.ai/driverless-ai/latest-stable/docs/userguide/scoring_pipeline_visualize.html#visualize-scoring-pipeline).
      - **Download Summary and Logs**  - An experiment summary is available for each completed experiment as zip file.
@@ -560,27 +558,28 @@ _Things to Note:_
 
 2. Iteration Data - Validation
 
-- The winning model's validation score and the algorithm used are as follows:
-
-   - Validation Score - .2207
-   - Model Type: TEXTBERT
-
- 3. Variable Importance: Summary of top 20 - Feature Engineered variables
-
-Driverless AI performs feature Engineering on the dataset to determine the optimal representation of the data. Various stages of the features appear throughout the iteration of the data. These can be viewed by hovering over points on the Iteration Data - Validation Graph and seeing the updates on the  **Variable Importance** section.
-
-![variable-importance](assets/variable-importance.png)
+      - The winning model's validation score and the algorithm used are as follows:
+           - Validation Score - .2207
+           - Model Type: TEXTBERT
 
 
+3. Variable Importance: Summary of top 20 - Feature Engineered variables
 
-The complete list of features used in the final model is available in the Experiment Summary artifacts. The Experiment Summary also provides a list of the original features and their estimated feature importance.
+     Driverless AI performs feature Engineering on the dataset to determine the optimal representation of the data. Various stages of the features appear throughout the iteration of the data. These can be viewed by hovering over points on the Iteration Data - Validation Graph and seeing the updates on the  **Variable Importance** section.
+
+ 
+      ![variable-importance](assets/variable-importance.png)
+
+
+
+     The complete list of features used in the final model is available in the Experiment Summary artifacts. The Experiment Summary also provides a list of the original features and their estimated feature importance.
 
 4. Summary
 
-This option gives a brief summary of the entire experiment including :
+     This option gives a brief summary of the entire experiment including :
 
--   How many features were tested and selected?
--   How many models were trained for feature evolution?
+     -   How many features were tested and selected?
+     -   How many models were trained for feature evolution?
 
 There are also several plots adjacent to the summary tab that give insight into the experiment. If you are interested in learning more about each plot and the metrics derived from those plots covered in this section, then check out our next tutorial [Machine Learning Experiment Scoring and Analysis Tutorial - Financial Focus](https://h2oai.github.io/tutorials/machine-learning-experiment-scoring-and-analysis-tutorial-financial-focus/#0).
 
