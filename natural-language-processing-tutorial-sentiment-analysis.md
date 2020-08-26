@@ -65,7 +65,6 @@ If you are using **Aquarium** as the environment, then the lab **Driverless AI T
 
 On clicking the highlighted `Start lab` button , you will be taken  to a Driverless AI platform with several pre-loaded data sets and pre-run visualizations, models, interpretations, and deployments. Here  you will have access to both the training and testing set for Amazon fine food reviews.
 
-
 1\. Verify that both datasets are on the Datasets Overview, your screen should look similar to the page below:
 
 ![datasets-overview](assets/datasets-overview.png)
@@ -78,32 +77,31 @@ On clicking the highlighted `Start lab` button , you will be taken  to a Driverl
 
 ![dataset-columns-info](assets/dataset-columns-info.png)
 
-
 *Things to Note:*
 
 The dataset consists of 10 columns which are as follows:
--  **UserId** - Unique identifier for the user
--  **ProductId** - Unique identifier for the product
--  **Id** - Row Id
--  **Summary** - Brief summary of the review
--  **Score** - Rating between 1 and 5
--  **HelpfulnessDenominator** - Number of users who indicated whether they found the review helpful or not
--  **ProfileName** - Profile name of the user          
+
+1.  **UserId** - Unique identifier for the user
+2. **ProductId** - Unique identifier for the product
+3.  **Id** - Row Id
+4.  **Summary** - Brief summary of the review
+5.  **Score** - Rating between 1 and 5
+6.  **HelpfulnessDenominator** - Number of users who indicated whether they found the review helpful or not
+7.  **ProfileName** - Profile name of the user          
 
 4\. Continue scrolling the current page to see more columns (image is not included)
 
--  **HelpfulnessNumerator** - Number of users who found the review helpful 
--  **Time** - Timestamp for the review 
--  **Description** - Text of the review
--  **Positive Review** - Whether the review is Positive or Negative
+8.  **HelpfulnessNumerator** - Number of users who found the review helpful 
+9.  **Time** - Timestamp for the review 
+10. **Description** - Text of the review
+11.  **Positive Review** - Whether the review is Positive or Negative
 
 5\. Return to the **Datasets** Page
 
 ### Launch Experiment
 
-As mentioned in the objectives, this tutorial includes a pre-ran sentiment analysis experiment which includes all the datasets that are required for the experiment. You can read how to initiate an experiment and set all the settings. However, if your experiment takes too long to run or doesn't complete in the time allotted for the lab, kindly make use of the pre-ran version by going on to the `Experiments` tab and selecting the desired experiment.
 
-1\. On the Datasets page click on the **AmazonFineFoodReviews-train-26k.csv** dataset and select Predict
+1\. On the Datasets page click on the `**AmazonFineFoodReviews-train-26k.csv**` dataset and select Predict
 
 ![launch_experiment](assets/launch_experiment.png)
 
@@ -119,21 +117,22 @@ As mentioned in the objectives, this tutorial includes a pre-ran sentiment analy
 
  2. **Target Column** -  The *Target column* contains the value that we intend to predict through the experiment. Click on the `Select Target Column` tab and select **Positive Review** as the target column. The aim of the experiment is to try to predict whether a fiven review is positive or negative, hence the Positive Review is selected as the target column. The column has only two values i.e Positive and Negative.
 
-![target_column](assets/target_column.png)
+     ![target_column](assets/target_column.png)
 
-3. **Test Dataset** -  The *Test dataset* is a dataset used to provide an unbiased evaluation of a _final_ model fit on the training dataset. It is not used during training of the model and results are available at the end of the experiment. Select the `AmazonFineFoodReviews-test-26k.csv` dataset as follows:
+ 3. **Dropped Columns** - The *Dropped Columns* feature enable us to  drop column(s) from your dataset that you don't want  to use in the experiment.For this experiment we shall only use the text columns so we shall drop all columns that are not in text format. 
 
-![Test_dataset](assets/Test_dataset.png)
 
-4. **Dropped Columns** - The *Dropped Columns* feature enable us to  drop column(s) from your dataset that you don't want to use in the experiment.For this experiment we shall only use the text columns. Hence we shall drop all columns except the `Description` column. 
+     ![Dropped-Columns](assets/Dropped-Columns.png)
+     
+     However, please note that you can also choose to keep the non-text columns and NLP algorithms will work on that too.
 
-![Dropped-Columns](assets/Dropped-Columns.png)
+ 4. **Test Dataset** -  The *Test dataset* is a dataset used to provide an unbiased evaluation of a _final_ model fit on the training dataset. It is not used during training of the model and results are available at the end of the experiment. Select the `AmazonFineFoodReviews-test-26k.csv` dataset as follows:
 
-However, please note that you can also choose to keep the non-text columns and NLP algorithms will work on that too.
+     ![Test_dataset](assets/Test_dataset.png)
 
-The experiment screen will finally look like the image below:
+     The experiment screen will finally look like the image below:
 
-![final_experiment_screen](assets/final_experiment_screen.png)
+     ![final_experiment_screen](assets/final_experiment_screen.png)
 
 In **Task 2**, we shall explore and update the Experiment Settings.
 
